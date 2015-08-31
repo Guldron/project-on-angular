@@ -1,10 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="store">
 <head>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" href="all.css">
+	<link rel="stylesheet" href="app.css">
 </head>
 <body>
+	<selection ng-init="tab = 1" ng-controller="tabsController as tabs">
+		<ul class="tabsmain">
+			<li ng-class = "{ active: tabs.isSelected(1) }">
+				<a href="#/maintain" ng-click="tabs.selectTab(1)">Maintain</a>
+			</li>
+			<li ng-class = "{ active: tabs.isSelected(2) }">
+				<a href="#/upload" ng-click="tabs.selectTab(2)">Upload</a>
+			</li>
+			<li ng-class = "{ active: tabs.isSelected(3) }">
+				<a href="#/reports" ng-click="tabs.selectTab(3)">Reports</a>
+			</li>
+			<li ng-class = "{ active: tabs.isSelected(4) }">
+				<a href="#/maintance" ng-click="tabs.selectTab(4)">Maintance</a>
+			</li>
+		</ul>
+		<div ng-view>	
+		</div>
+	</selection>
 	<script src="vendor.js"></script>
 	<script src="app.js"></script>
 </body> 
