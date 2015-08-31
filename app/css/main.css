@@ -1,0 +1,18 @@
+body {
+	background-color: #191919;
+}
+
+.tabs-list {
+
+}
+
+.active {
+	display: inline;
+	width: 150 px;
+}
+
+.inactive {
+	display: inline;
+	width: 150 px;
+}
+

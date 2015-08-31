@@ -5,19 +5,19 @@
 	<link rel="stylesheet" href="app.css">
 </head>
 <body>
-	<selection ng-init="tab = 1" ng-controller="tabsController as tabs">
-		<ul class="tabsmain">
-			<li ng-class = "{ active: tabs.isSelected(1) }">
-				<a href="#/maintain" ng-click="tabs.selectTab(1)">Maintain</a>
+	<selection ng-init="tab = 1">
+		<ul class="tabs-list">
+			<li ng-class = "{ active: tab === 1, inactive: tab != 1}">
+				<a href="#/maintain" ng-click="tab = 1">Maintain</a>
 			</li>
-			<li ng-class = "{ active: tabs.isSelected(2) }">
-				<a href="#/upload" ng-click="tabs.selectTab(2)">Upload</a>
+			<li ng-class = "{ active: tab === 2, inactive: tab != 2}">
+				<a href="#/upload" ng-click="tab = 2">Upload</a>
 			</li>
-			<li ng-class = "{ active: tabs.isSelected(3) }">
-				<a href="#/reports" ng-click="tabs.selectTab(3)">Reports</a>
+			<li ng-class = "{ active: tab === 3, inactive: tab != 3}">
+				<a href="#/reports" ng-click="tab = 3">Reports</a>
 			</li>
-			<li ng-class = "{ active: tabs.isSelected(4) }">
-				<a href="#/maintance" ng-click="tabs.selectTab(4)">Maintance</a>
+			<li ng-class = "{ active: tab === 4, inactive: tab != 4}">
+				<a href="#/maintance" ng-click="tab = 4">Maintance</a>
 			</li>
 		</ul>
 		<div ng-view>	

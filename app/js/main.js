@@ -1,6 +1,6 @@
 'use strict';
 
-var app = angular.module('store', ['ngRoute','tabsController']);
+var app = angular.module('store', ['ngRoute']);
 
 app.config(function($routeProvider){
 	$routeProvider
