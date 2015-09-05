@@ -1,0 +1,119 @@
+{
+	"errorID": null,
+	"errorMessage": null,
+	"response": {
+		"controlKeys": {
+			"keys": [
+        
+			]
+		},
+	  "source": "MOBILITY",
+	  "tiers": [
+      
+	  ],
+	  "summaries": [
+		{
+			"tier": "TIER_4",
+			"searchValue": "1",
+			"searchKeyValue": 1,
+			"transactionKey": null,
+			"displayDetails": {
+				"Line:": "1",
+				"EDC:": "111111",
+				"Amount:": "345.67",
+				"Desc:": "Some cool part",
+				"Type:": "M",
+				"Class:": "PT"
+			},
+			"displayString": "Line:1  EDC:111111  Amount:345.67  Desc:Some cool part  Type:M  Class:PT",
+			"allocationRowCount": 1,
+			"allocationTotalPercent": null,
+			"allocations": [
+          
+			],
+			"seriesGroup": [
+          
+			],
+			"error": null
+		},
+		{
+			"tier": "TIER_4",
+			"searchValue": "2",
+			"searchKeyValue": 2,
+			"transactionKey": null,
+			"displayDetails": {
+				"Line:": "2",
+				"EDC:": "111112",
+				"Amount:": "345.67",
+				"Desc:": "Some cool part Item:2",
+				"Type:": "M",
+				"Class:": "PT"
+			},
+			"displayString": "Line:2  EDC:111112  Amount:345.67  Desc:Some cool part Item:2  Type:M  Class:PT",
+			"allocationRowCount": 2,
+			"allocationTotalPercent": null,
+			"allocations": [
+          
+			],
+			"seriesGroup": [
+          
+			],
+			"error": null
+		},
+		{
+			"tier": "TIER_4",
+			"searchValue": "3",
+			"searchKeyValue": 3,
+			"transactionKey": null,
+			"displayDetails": {
+				"Line:": "3",
+				"EDC:": "111113",
+				"Amount:": "345.67",
+				"Desc:": "Some cool part Item:3",
+				"Type:": "M",
+				"Class:": "PT"
+			},
+			"displayString": "Line:3  EDC:111113  Amount:345.67  Desc:Some cool part Item:3  Type:M  Class:PT",
+			"allocationRowCount": 3,
+			"allocationTotalPercent": null,
+			"allocations": [
+          
+			],
+			"seriesGroup": [
+          
+			],
+			"error": null
+		},
+		{
+			"tier": "TIER_4",
+			"searchValue": "4",
+			"searchKeyValue": 4,
+			"transactionKey": null,
+			"displayDetails": {
+				"Line:": "4",
+				"EDC:": "111114",
+				"Amount:": "345.67",
+				"Desc:": "Some cool part Item:4",
+				"Type:": "M",
+				"Class:": "PT"
+			},
+			"displayString": "Line:4  EDC:111114  Amount:345.67  Desc:Some cool part Item:4  Type:M  Class:PT",
+			"allocationRowCount": 4,
+			"allocationTotalPercent": null,
+			"allocations": [
+          
+			],
+			"seriesGroup": [
+          
+			],
+			"error": null
+		}
+	  ],
+	  "errorResults": [
+      
+	  ],
+	  "metrics": [
+      
+	  ]
+	}
+}

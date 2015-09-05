@@ -1,0 +1,4 @@
+{"errorID":null,"errorMessage":null,"response":{
+	"content":[{"customerNumber":"8656314","address":"APPLE, CUPERTINO, CA"},{"customerNumber":"8785014","address":"APPLE, VERNON HILLS, IL"},{"customerNumber":"8841430","address":"APPLE, MARKHAM, ON"},{"customerNumber":"8841432","address":"APPLE, AUSTIN, TX"},{"customerNumber":"8874820","address":"APPLE, SACRAMENTO, CA"}],
+	"totalRecordCount":140
+}}

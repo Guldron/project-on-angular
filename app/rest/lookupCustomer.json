@@ -1,0 +1,21 @@
+{ "errorID": null,
+	"errorMessage": null,
+	"response": [
+		{
+			"customerNumber": "156207",
+			"customerDescription": "  156207-ABCO LEASING INC.*blank " },
+		{
+			"customerNumber": " 1156207",
+			"customerDescription": " 1156207-LESLEY APGAR                        RD1 BOX 1242                        RUSSELL                   PA                        16345                                    "
+		},
+		{
+			"customerNumber": " 1562070",
+			"customerDescription": " 1562070-JERRY COPSTEIN                      16 N FRENCH COURT                   MUNDELEIN                 IL                        60060                                    "
+		},
+		{
+			"customerNumber": " 1562071",
+			"customerDescription": " 1562071-STEVE SORENSEN                      1953 NORTH 90 EAST                  OREM                      UT                        84057                                    "
+		}
+
+	]}
+

@@ -1,0 +1,21 @@
+{ "errorID": null,
+	"errorMessage": null,
+	"response": [
+		{
+			"accountNumber": "CHPCOM  ",
+			"deliveryAddressSequence": "000",
+			"companyNumber": "00",
+			"name": "CHP COMPUTER                       ",
+			"status": "I"
+		},
+		{ "accountNumber": "HPCHIL  ",
+			"deliveryAddressSequence": "000",
+			"companyNumber": "00",
+			"name": "HP CHILI FOR CHILDREN              ",
+			 "status": "I" },
+		{ "accountNumber": "ECSOMA  ",
+			"deliveryAddressSequence": "000",
+			"companyNumber": "00",
+			"name": "JMG/HP SALES UNIVERSITY            ", 
+			"status": "I" }
+	] }

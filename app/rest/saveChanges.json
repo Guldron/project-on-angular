@@ -1,0 +1,14 @@
+{
+	"errorID": null,
+	"errorMessage": null,
+	"response": {
+		"results": [
+			{
+				"clientGUID": "ABC123",
+				"tiers": [ ],
+				"metrics": [ "Customer Change Pass1: 0ms", "Retrieve Order Details: 2001ms", "Mobility Retrieve Keys Total: 2001ms", "Customer Change Pass2: 0ms", "Update Customer Allocations for: TIER_0: 0ms", "Update Customer Allocations for: TIER_1: 0ms", "Update Allocations: 0ms" ]
+			}
+		],
+		"serverInfo": { }
+	}
+}

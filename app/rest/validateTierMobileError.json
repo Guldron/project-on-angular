@@ -1,0 +1,61 @@
+{
+	"errorID": null,
+	"errorMessage": null,
+	"response": {
+		"controlKeys": {
+			"keys": [
+			  "CK_LAST_TIER"
+			]
+		},
+	  "source": "MOBILITY",
+	  "tiers": [
+		{
+			"tier": "TIER_2",
+			"searchValue": "1000",
+			"searchKeyValue": "1000",
+			"transactionKey": null,
+			"displayDetails": {
+				"Order:": "1000",
+				"Comp:": "01",
+				"Date:": "",
+				"Status:": "X",
+				"Type:": "M",
+				"Value:": "45.8",
+				"Quote:": "7777",
+				"Active:": "Y",
+				"SM1:": "X123",
+				"SM2:": "X456",
+				"Team:": ""
+			},
+			"displayString": "Order:1000  Comp:01  Date:  Status:X  Type:M  Value:45.8  Quote:7777  Active:Y  SM1:X123  SM2:X456  Team:",
+			"selectionListValues": {
+          
+			},
+			"error": {
+				"type": "ERROR",
+				"code": "CM103",
+				"description": "Search value is valid but is not associated to the previous tier's value.",
+				"details": null,
+				"parameters": {
+            
+				}
+			},
+			"seriesGroup": [
+			  {
+			  	"key": "COMP_CODE",
+			  	"searchValue": "01"
+			  }
+			]
+		}
+	  ],
+	  "errorResults": [
+      
+	  ],
+	  "metrics": [
+      
+	  ],
+	  "serverInfo": {
+      
+	  }
+	}
+}

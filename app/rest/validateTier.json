@@ -1,0 +1,113 @@
+{
+	"errorID": null,
+	"errorMessage": null,
+	"response": {
+		"controlKeys": {
+			"keys": [
+        
+			]
+		},
+	  "source": "MOBILITY",
+	  "tiers": [
+		{
+			"tier": "TIER_0",
+			"searchValue": "   30000",
+			"searchKeyValue": "30000",
+			"transactionKey": null,
+			"displayDetails": {
+				"Customer:": "30000",
+				"Name:": "Famous Dave's",
+				"Company:": "01",
+				"City:": "Hutchinson",
+				"State:": "KS",
+				"Rep1:": "SLM1"
+			},
+			"displayString": "TERER_0 Customer:30000  Name:Famous Dave's  Company:01  City:Hutchinson  State:KS  Rep1:SLM1",
+			"selectionListValues": {
+          
+			},
+			"error": null,
+			"seriesGroup": [
+          
+			]
+		},
+		{
+			"tier": "TIER_1",
+			"searchValue": "30000",
+			"searchKeyValue": " 30000",
+			"transactionKey": null,
+			"displayDetails": {
+				"Customer:": "30000",
+				"Name:": "Famous Dave's",
+				"Company:": "01",
+				"City:": "Hutchinson",
+				"State:": "KS",
+				"Rep1:": "SLM1"
+			},
+			"displayString": "Customer:30000  Name:Famous Dave's  Company:01  City:Hutchinson  State:KS  Rep1:SLM1",
+			"selectionListValues": {
+          
+			},
+			"error": null,
+			"seriesGroup": [
+          
+			]
+		},
+		{
+			"tier": "TIER_2",
+			"searchValue": "1000",
+			"searchKeyValue": "1000",
+			"transactionKey": null,
+			"displayDetails": {
+				"Order:": "1000",
+				"Comp:": "01",
+				"Date:": "",
+				"Status:": "X",
+				"Type:": "M",
+				"Value:": "45.8",
+				"Quote:": "7777",
+				"Active:": "Y",
+				"SM1:": "X123",
+				"SM2:": "X456",
+				"Team:": ""
+			},
+			"displayString": "Order:1000  Comp:01  Date:  Status:X  Type:M  Value:45.8  Quote:7777  Active:Y  SM1:X123  SM2:X456  Team:",
+			"selectionListValues": {
+				
+			},
+			"error": null,
+			"seriesGroup": [
+			  {
+			  	"key": "COMP_CODE",
+			  	"searchValue": "01"
+			  }
+			]
+		},
+		{
+			"tier": "TIER_3",
+			"searchValue": "second second",
+			"searchKeyValue": null,
+			"transactionKey": null,
+			"displayDetails": null,
+			"displayString": null,
+			"selectionListValues": {
+				"first first": "First",
+				"second second": "Second"
+			},
+			"error": null,
+			"seriesGroup": [
+          
+			]
+		}
+	  ],
+	  "errorResults": [
+      
+	  ],
+	  "metrics": [
+      
+	  ],
+	  "serverInfo": {
+      
+	  }
+	}
+}

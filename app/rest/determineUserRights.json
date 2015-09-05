@@ -1,0 +1,16 @@
+{
+	"errorID": null,
+	"errorMessage": null,
+	"response": {
+		"coworker": {
+			"employeeID": "J499",
+			"userID": "GREGMCG",
+			"first": "Greg",
+			"middle": "G",
+			"last": "McGee",
+			"nicname": "Greg"
+		},
+	  "authorizationLevelStandard": "EDIT",
+	  "authorizationLevelSuper": "VIEW"
+	}
+}

@@ -1,6 +1,5 @@
 var gulp = require('gulp'),
 	concat = require('gulp-concat'),
-	mainBowerFiles = require('main-bower-files'),
 	livereload = require('gulp-livereload'),
 	connect = require('gulp-connect');
 
@@ -17,13 +16,19 @@ gulp.task('html', function () {
 });
 
 gulp.task('bower_components', function(){
-	gulp.src(mainBowerFiles(), {base: 'app/bower_components'})
+	gulp.src(['app/bower_components/angular/angular.min.js',
+				'app/bower_components/angular-ui-router/release/angular-ui-router.js',
+				'app/bower_components/jquery/dist/jquery.min.js',
+				'app/bower_components/semantic/dist/semantic.min.js'
+				])
 	.pipe(concat('vendor.js'))
 	.pipe(gulp.dest('./app'))
 });
 
 gulp.task('css', function () {
-	gulp.src('app/css/*.css')
+	gulp.src(['app/css/*.css',
+			'app/bower_components/semantic/dist/semantic.min.css'	
+			])
 	.pipe(concat('app.css'))
 	.pipe(gulp.dest('./app'))
 	.pipe(connect.reload())

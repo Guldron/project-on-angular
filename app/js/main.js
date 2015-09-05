@@ -1,27 +1,36 @@
+var app = app || {};
+;(function(){
+
 'use strict';
 
-var app = angular.module('store', ['ngRoute']);
+	angular
+		.module('app', ['ui.router'])
+		.config(function($stateProvider, $urlRouterProvider) {
+	    $urlRouterProvider.otherwise("/maintain");
+	    $stateProvider
+	    .state('/', {
+	      url: "/maintain",
+	      templateUrl: "partials/maintain.html"
+	    })
+	    .state('/maintain', {
+	      url: "/maintain",
+	      templateUrl: "partials/maintain.html"
+	    })
+	    .state('/reports', {
+	      url: "/reports",
+	      templateUrl: "partials/reports.html"
+	    })
+	    .state('/upload', {
+	      url: "/upload",
+	      templateUrl: "partials/upload.html"
+	    })
+	    .state('/maintance', {
+	      url: "/maintance",
+	      templateUrl: "partials/maintance.html"
+	    })
+	});
 
-app.config(function($routeProvider){
-	$routeProvider
-	.when('/',{
-		templateUrl: '/partials/maintain.html'
-	})
 
-	.when('/maintain',{
-		templateUrl: '/partials/maintain.html'
-	})
 
-	.when('/reports',{
-		templateUrl: '/partials/reports.html'
-	})
-
-	.when('/upload',{
-		templateUrl: '/partials/upload.html'
-	})
-
-	.when('/maintance',{
-		templateUrl: '/partials/maintance.html'
-	})
-});
+})();
 

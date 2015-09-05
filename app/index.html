@@ -1,28 +1,30 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="store">
+<html lang="en" ng-app="app">
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="app.css">
 </head>
-<body>
-	<selection ng-init="tab = 1">
-		<ul class="tabs-list">
+<body> 
+<header class="header">
+	<selection ng-controller="TabsController">
+	{{name}}
+		<!-- <ul class="tabs-list" >
 			<li ng-class = "{ active: tab === 1, inactive: tab != 1}">
-				<a href="#/maintain" ng-click="tab = 1">Maintain</a>
+				<a href="#/maintain" class="tabs-link" ng-click="tab = 1">Maintain</a>
 			</li>
 			<li ng-class = "{ active: tab === 2, inactive: tab != 2}">
-				<a href="#/upload" ng-click="tab = 2">Upload</a>
+				<a href="#/upload" class="tabs-link" ng-click="tab = 2">Upload</a>
 			</li>
 			<li ng-class = "{ active: tab === 3, inactive: tab != 3}">
-				<a href="#/reports" ng-click="tab = 3">Reports</a>
+				<a href="#/reports" class="tabs-link" ng-click="tab = 3">Reports</a>
 			</li>
 			<li ng-class = "{ active: tab === 4, inactive: tab != 4}">
-				<a href="#/maintance" ng-click="tab = 4">Maintance</a>
+				<a href="#/maintance" class="tabs-link" ng-click="tab = 4">Maintance</a>
 			</li>
 		</ul>
-		<div ng-view>	
-		</div>
+		<div ui-view></div> -->
 	</selection>
+</header>
 	<script src="vendor.js"></script>
 	<script src="app.js"></script>
 </body> 

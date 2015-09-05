@@ -1,0 +1,17 @@
+{
+"SuccessfulResponse": [
+				{
+					"errorID":null,
+					"errorMessage":null,
+					”message”:”File successfully uploaded”,
+					"response":true
+				}
+		  	],
+"ErrorResponse": [
+				{
+					"errorID":null,
+					"errorMessage":"Please upload a valid excel file"
+				"response":false
+				}
+		  	]
+}

@@ -1,18 +1,46 @@
 body {
+	margin: 0;
+	padding: 0;
+}
+
+.header {
+	height: 50px;
 	background-color: #191919;
 }
 
 .tabs-list {
-
+	width: auto;
+	bottom: 0;
+	margin: 0;
+	padding-top: 5px;
 }
 
 .active {
-	display: inline;
+	display: inline-block;
+	border-radius: 6px 6px 0 0;
+	color: white;
 	width: 150 px;
+	height: 45px;
+	padding-right: 30px;
+	background-color: white;
+	color: black;
 }
 
 .inactive {
-	display: inline;
+	display: inline-block;
+	border-radius: 6px 6px 0 0;
+	color: white;
 	width: 150 px;
+	height: 45px;
+	padding-right: 30px;
+	background-color: #323232;
+	color: #cccccc;
 }
 
+.tabs-link {
+	display: block;
+	text-align: center;
+	height: 100%;
+	bottom: 0;
+	text-decoration: none;
+}

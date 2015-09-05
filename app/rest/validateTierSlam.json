@@ -1,0 +1,55 @@
+{
+	"errorID": null,
+	"errorMessage": null,
+	"response": {
+		"controlKeys": {
+			"keys": [
+			  "CK_LAST_TIER"
+			]
+		},
+	  "source": "SOFT_AGMT",
+	  "tiers": [
+		{
+			"tier": "TIER_2",
+			"searchValue": null,
+			"searchKeyValue": 2576189,
+			"transactionKey": null,
+			"displayDetails": {
+				"AgmtNum:": "45491527",
+				"EnrollmentNum:": "2576189",
+				"Start:": "",
+				"End:": "",
+				"Act:": "0"
+			},
+			"displayString": "AgmtNum:45491527  EnrollmentNum:2576189  Start:  End:  Act:0",
+			"selectionListValues": {
+          
+			},
+			"error": null,
+			"seriesGroup": [
+			  {
+			  	"key": "AGREEMENT_NUMBER",
+			  	"searchValue": "72S67812"
+			  },
+			  {
+			  	"key": "ENROLLMENT_NUMBER",
+			  	"searchValue": "2576189"
+			  },
+			  {
+			  	"key": "PROGRAM_NAME",
+			  	"searchValue": "MSSELECT"
+			  }
+			]
+		}
+	  ],
+	  "errorResults": [
+      
+	  ],
+	  "metrics": [
+      
+	  ],
+	  "serverInfo": {
+      
+	  }
+	}
+}

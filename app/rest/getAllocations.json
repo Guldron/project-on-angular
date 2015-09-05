@@ -1,0 +1,131 @@
+{
+	"errorID": null,
+	"errorMessage": null,
+	"response": {
+		"source": "MOBILITY",
+		"results": [
+		  {
+		  	"controlKeys": {
+		  		"keys": [
+				  "CK_LAST_TIER"
+		  		]
+		  	},
+		  	"clientGUID": "TEST_GUID",
+		  	"tiers": [
+			  {
+			  	"tier": "TIER_2",
+			  	"searchValue": "1000",
+			  	"searchKeyValue": "1000",
+			  	"transactionKey": null,
+			  	"displayDetails": {
+			  		"Order:": "1000",
+			  		"Comp:": "01",
+			  		"Date:": "",
+			  		"Status:": "X",
+			  		"Type:": "M",
+			  		"Value:": "45.8",
+			  		"Quote:": "7777",
+			  		"Active:": "Y",
+			  		"SM1:": "X123",
+			  		"SM2:": "X456",
+			  		"Team:": ""
+			  	},
+			  	"displayString": "Order:1000  Comp:01  Date:  Status:X  Type:M  Value:45.8  Quote:7777  Active:Y  SM1:X123  SM2:X456  Team:",
+			  	"allocations": [
+				  {
+				  	"recipientType": "CUSTOMER",
+				  	"coworker": null,
+				  	"customer": {
+				  		"customerNumber": "121212",
+				  		"name": null,
+				  		"city": null,
+				  		"state": null,
+				  		"mainContact": null
+				  	},
+				  	"vendor": null,
+				  	"startDate": "12/11/2012",
+				  	"endDate": "12/11/2012",
+				  	"percentage": "45",
+				  	"fixedAmount": null,
+				  	"perUnitAmount": null,
+				  	"commissionType": "GP",
+				  	"lastMaintUserID": null,
+				  	"lastMaintDateTime": null
+				  },
+				  {
+				  	"recipientType": "COWORKER",
+				  	"coworker": {
+				  		"employeeID": "C555",
+				  		"userID": "BILLJOH",
+				  		"first": "Bill",
+				  		"middle": null,
+				  		"last": "Johnson",
+				  		"nicname": null
+				  	},
+				  	"customer": null,
+				  	"vendor": null,
+				  	"startDate": "12/11/2012",
+				  	"endDate": "12/11/2012",
+				  	"percentage": "55",
+				  	"fixedAmount": null,
+				  	"perUnitAmount": null,
+				  	"commissionType": "GP",
+				  	"lastMaintUserID": null,
+				  	"lastMaintDateTime": null
+				  },
+				  {
+				  	"recipientType": "VENDOR",
+				  	"coworker": null,
+				  	"customer": null,
+				  	"vendor": {
+				  		"code": "HEWSAP",
+				  		"name": "Hewlett Packard"
+				  	},
+				  	"startDate": "12/11/2012",
+				  	"endDate": "12/11/2012",
+				  	"percentage": "20",
+				  	"fixedAmount": null,
+				  	"perUnitAmount": null,
+				  	"commissionType": "GP",
+				  	"lastMaintUserID": null,
+				  	"lastMaintDateTime": null
+				  }
+			  	],
+			  	"additionalInfo": {
+              
+			  	},
+			  	"error": {
+			  		"type": "ERROR",
+			  		"code": "CM103",
+			  		"description": "Search value is valid but is not associated to the previous tier's value.",
+			  		"details": null,
+			  		"parameters": {
+                
+			  		}
+			  	},
+			  	"seriesGroup": [
+				  {
+				  	"key": "COMP_CODE",
+				  	"searchValue": "01"
+				  }
+			  	]
+			  }
+		  	],
+		  	"errorResults": [
+			  {
+			  	"type": "ERROR",
+			  	"code": "CM110",
+			  	"description": "The vendor code was not found   Vendor: C555",
+			  	"details": null,
+			  	"parameters": {
+              
+			  	}
+			  }
+		  	],
+		  	"metrics": [
+          
+		  	]
+		  }
+		]
+	}
+}

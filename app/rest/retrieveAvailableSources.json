@@ -1,0 +1,11 @@
+{
+	"errorID": null,
+	"errorMessage": null,
+	"response": {
+		"sources": {
+			"ALL": "All sources",
+			"MOBILITY": "Mobile",
+			"SOFT_AGMT": "SLAM"
+		}
+	}
+}

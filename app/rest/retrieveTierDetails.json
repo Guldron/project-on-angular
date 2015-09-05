@@ -1,0 +1,49 @@
+{
+	"errorID": null,
+	"errorMessage": null,
+	"response": {
+		"definitions": [
+		  {
+		  	"tierLevel": "TIER_1",
+		  	"type": "ALPHANUMERIC",
+		  	"shortName": "Customer",
+		  	"name": "CUSTOMER",
+		  	"descriptiveName": "Customer Number",
+		  	"hoverHelpInfo": "This is a customers account number.  Such as '1123676'.",
+		  	"disabledUntilPreviousTierSet": false,
+		  	"allowSearchSeriesGroup": false,
+		  	"allowStartEndDate": false,
+		  	"inputFieldType": "INPUT",
+		  	"fieldLength":8
+		  },
+		  {
+		  	"tierLevel": "TIER_2",
+		  	"type": "ALPHANUMERIC",
+		  	"shortName": "Agreement",
+		  	"name": "AGREEMENT",
+		  	"descriptiveName": "Agreement",
+		  	"hoverHelpInfo": "This is an agreement.  The value can be any of the following:  agreement number, enrollment number, or authorization number.",
+		  	"disabledUntilPreviousTierSet": false,
+		  	"allowSearchSeriesGroup": true,
+		  	"allowStartEndDate": true,
+		  	"inputFieldType": "INPUT",
+		  	"fieldLength":50
+		  },
+		  {
+		  	"tierLevel": "TIER_3",
+		  	"type": "ALPHANUMERIC",
+		  	"shortName": "Activity",
+		  	"name": "AGREEMENT_ACTIVITY",
+		  	"descriptiveName": "Agreement Activity",
+		  	"hoverHelpInfo": "This is an agreement activity.",
+		  	"disabledUntilPreviousTierSet": true,
+		  	"allowSearchSeriesGroup": false,
+		  	"allowStartEndDate": true,
+		  	"inputFieldType": "SELECT",
+		  	"fieldLength":100
+		  }
+		],
+		"infoMessage": "Enter customer and/or agreement, enrollment, authorization number",
+		"excelTemplateLink": "/templates/MobilityCommissionAllocations.xlsx"
+	}
+}
