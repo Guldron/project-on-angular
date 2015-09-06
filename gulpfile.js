@@ -43,6 +43,7 @@ gulp.task('js', function () {
 
 gulp.task('watch', function () {
 	gulp.watch('bower.json', ['bower_components'])
+	gulp.watch('app/partials/*.html', ['html'])
 	gulp.watch('app/index.html', ['html'])
 	gulp.watch('app/css/*.css', ['css'])
 	gulp.watch('app/js/*.js', ['js'])

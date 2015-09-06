@@ -1,4 +1,3 @@
-var app = app || {};
 ;(function(){
 
 'use strict';
@@ -29,8 +28,5 @@ var app = app || {};
 	      templateUrl: "partials/maintance.html"
 	    })
 	});
-
-
-
 })();
 

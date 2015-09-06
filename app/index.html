@@ -6,23 +6,22 @@
 </head>
 <body> 
 <header class="header">
-	<selection ng-controller="TabsController">
-	{{name}}
-		<!-- <ul class="tabs-list" >
-			<li ng-class = "{ active: tab === 1, inactive: tab != 1}">
-				<a href="#/maintain" class="tabs-link" ng-click="tab = 1">Maintain</a>
+	<selection ng-controller="TabsController as tabs">
+		<ul class="tabs-list" >
+			<li ng-class ="tabs.isSelected(1)">
+				<a href="#/maintain" ng-click="tabs.selectTab(1)">Maintain</a>
 			</li>
-			<li ng-class = "{ active: tab === 2, inactive: tab != 2}">
-				<a href="#/upload" class="tabs-link" ng-click="tab = 2">Upload</a>
+			<li ng-class ="tabs.isSelected(2)">
+				<a href="#/upload" ng-click="tabs.selectTab(2)">Upload</a>
 			</li>
-			<li ng-class = "{ active: tab === 3, inactive: tab != 3}">
-				<a href="#/reports" class="tabs-link" ng-click="tab = 3">Reports</a>
+			<li ng-class ="tabs.isSelected(3)">
+				<a href="#/reports" ng-click="tabs.selectTab(3)">Reports</a>
 			</li>
-			<li ng-class = "{ active: tab === 4, inactive: tab != 4}">
-				<a href="#/maintance" class="tabs-link" ng-click="tab = 4">Maintance</a>
+			<li ng-class ="tabs.isSelected(4)">
+				<a href="#/maintance" ng-click="tabs.selectTab(4)">Maintance</a>
 			</li>
 		</ul>
-		<div ui-view></div> -->
+		<div ui-view></div>
 	</selection>
 </header>
 	<script src="vendor.js"></script>
