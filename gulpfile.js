@@ -3,50 +3,67 @@ var gulp = require('gulp'),
 	livereload = require('gulp-livereload'),
 	connect = require('gulp-connect');
 
+var bowerComponents = ['./app/bower_components/angular/angular.min.js',
+					   './app/bower_components/angular-ui-router/release/angular-ui-router.js',
+					   './app/bower_components/jquery/dist/jquery.min.js'];
+
+var jsFiles = ['./app/app.module.js',
+			   './app/*.js',
+			   './app/tabs/*.js'];
+
+var cssFiles = ['./app/css/*.css'];
+
+var templates = ['./app/tabs/tabs.directive.html',
+				 './app/partials/maintain.html',
+				 './app/partials/upload.html',
+				 './app/partials/reports.html',
+				 './app/partials/maintance.html'];
+
+
 gulp.task('connect', function () {
 	connect.server({
-		root: 'app',
+		root: 'public',
 		livereload: true
 	});
 });
 
 gulp.task('html', function () {
-	gulp.src('app/index.html')
+	gulp.src('./public/index.html')
+	.pipe(connect.reload())
+});
+
+gulp.task('templates', function(){
+	gulp.src(templates)
+	.pipe(gulp.dest('./public/vendor/templates/'))
 	.pipe(connect.reload())
 });
 
 gulp.task('bower_components', function(){
-	gulp.src(['app/bower_components/angular/angular.min.js',
-				'app/bower_components/angular-ui-router/release/angular-ui-router.js',
-				'app/bower_components/jquery/dist/jquery.min.js',
-				'app/bower_components/semantic/dist/semantic.min.js'
-				])
+	gulp.src(bowerComponents)
 	.pipe(concat('vendor.js'))
-	.pipe(gulp.dest('./app'))
+	.pipe(gulp.dest('./public/vendor'))
 });
 
 gulp.task('css', function () {
-	gulp.src(['app/css/*.css',
-			'app/bower_components/semantic/dist/semantic.min.css'	
-			])
+	gulp.src(cssFiles)
 	.pipe(concat('app.css'))
-	.pipe(gulp.dest('./app'))
+	.pipe(gulp.dest('./public'))
 	.pipe(connect.reload())
 });
 
 gulp.task('js', function () {
-	gulp.src('app/js/*.js')
+	gulp.src(jsFiles)
 	.pipe(concat('app.js'))
-	.pipe(gulp.dest('./app'))
+	.pipe(gulp.dest('./public'))
 	.pipe(connect.reload())
 });
 
 gulp.task('watch', function () {
 	gulp.watch('bower.json', ['bower_components'])
-	gulp.watch('app/partials/*.html', ['html'])
-	gulp.watch('app/index.html', ['html'])
-	gulp.watch('app/css/*.css', ['css'])
-	gulp.watch('app/js/*.js', ['js'])
+	gulp.watch('./public/index.html', ['html'])
+	gulp.watch(templates, ['templates'])
+	gulp.watch(cssFiles, ['css'])
+	gulp.watch(jsFiles, ['js'])
 });
 
-gulp.task('default', ['connect', 'html', 'bower_components', 'css', 'js', 'watch']);
+gulp.task('default', ['connect', 'html', 'templates', 'bower_components', 'css', 'js', 'watch']);
