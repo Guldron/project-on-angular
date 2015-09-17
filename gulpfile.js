@@ -9,12 +9,13 @@ var bowerComponents = ['./app/bower_components/angular/angular.min.js',
 
 var jsFiles = ['./app/app.module.js',
 			   './app/*.js',
-			   './app/tabs/*.js'];
+			   './app/tabs/*.js',
+			   './app/maintain/*.js'];
 
 var cssFiles = ['./app/css/*.css'];
 
 var templates = ['./app/tabs/tabs.directive.html',
-				 './app/partials/maintain.html',
+				 './app/maintain/maintain.html',
 				 './app/partials/upload.html',
 				 './app/partials/reports.html',
 				 './app/partials/maintance.html'];

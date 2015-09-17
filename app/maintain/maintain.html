@@ -1,0 +1,7 @@
+<div class="maintain" ng-controller="maintainController">
+	<select ng-model="select" ng-change="getData()">
+		<option>Standart</option>
+		<option ng-repeat="option in sources">{{option}}</option>
+	</select>
+</div>
+
