@@ -2,23 +2,16 @@
 
 'use strict';
 
+dataservice.$inject = ['$http'];
+
 function dataservice($http) {
+
     return {
-        getAvengers: getAvengers
+        getData: getData
     };
 
-    function getAvengers(url) {
-        return $http.get(url)
-            .then(getAvengersComplete)
-            .catch(getAvengersFailed);
-
-        function getAvengersComplete(response) {
-            return response.data;
-        }
-
-        function getAvengersFailed(error) {
-           console.log('XHR Failed for getAvengers.' + error.data);
-        }
+    function getData(url) {
+        return $http.get(url);
     }
 }
 

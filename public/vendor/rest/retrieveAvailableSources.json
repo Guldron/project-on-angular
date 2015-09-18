@@ -5,8 +5,7 @@
 		"sources": {
 			"ALL": "All sources",
 			"MOBILITY": "Mobile",
-			"SOFT_AGMT": "SLAM",
-			"hui": "SLA234M"
+			"SOFT_AGMT": "SLAM"
 		}
 	}
 }
