@@ -1,0 +1,19 @@
+<div class="search-form">
+	<h1>{{nameForSearching}} search using:</h1>
+	<form ng-submit="submitDetails()">
+		<p ng-repeat="detail in searchFormData">
+		{{detail.descriptiveName}}
+			<input
+			ng-disabled="{{detail.disabledUntilPreviousTierSet}}" 
+			>
+		</p>
+		<input type="submit" value="Search">
+	</form>
+</div>
+<div class="search-results-tabs">
+	<ul ng-repeat="detail in searchFormData">
+		<li><a href ng-class="tabClass($index)" ng-click="selectedTab($index)">{{detail.shortName}}</a></li>
+		<div>No search result:</div>
+	</ul>
+</div>
+	

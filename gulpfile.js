@@ -10,16 +10,17 @@ var bowerComponents = ['./app/bower_components/angular/angular.min.js',
 var jsFiles = ['./app/app.module.js',
 			   './app/*.js',
 			   './app/tabs/*.js',
-			   './app/maintain/*.js'];
-
-var cssFiles = ['./app/css/*.css'];
+			   './app/maintain/*.js',
+			   './app/maintain/search-form/*.js',
+			   './app/maintain/search-results/*.js'];
 
 var templates = ['./app/tabs/tabs.directive.html',
 				 './app/maintain/maintain.html',
+				 './app/maintain/search-form/search-form.directive.html',
+				 './app/maintain/search-results/search-results.directive.html',
 				 './app/partials/upload.html',
 				 './app/partials/reports.html',
 				 './app/partials/maintance.html'];
-
 
 gulp.task('connect', function () {
 	connect.server({
@@ -46,7 +47,7 @@ gulp.task('bower_components', function(){
 });
 
 gulp.task('css', function () {
-	gulp.src(cssFiles)
+	gulp.src('./app/css/*.css')
 	.pipe(concat('app.css'))
 	.pipe(gulp.dest('./public'))
 	.pipe(connect.reload())
@@ -63,7 +64,7 @@ gulp.task('watch', function () {
 	gulp.watch('bower.json', ['bower_components'])
 	gulp.watch('./public/index.html', ['html'])
 	gulp.watch(templates, ['templates'])
-	gulp.watch(cssFiles, ['css'])
+	gulp.watch('./app/css/*.css', ['css'])
 	gulp.watch(jsFiles, ['js'])
 });
 

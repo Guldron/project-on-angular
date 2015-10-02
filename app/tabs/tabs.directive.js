@@ -3,6 +3,7 @@
   'use strict';
 
   function tabs(constants){
+    var url = constants.templates.tabs;
 
     function link($scope, $element, $attrs){
       $scope.tab = 1;
@@ -24,7 +25,7 @@
 
     return {
     restrict:'EA',
-    templateUrl: constants.tabsTemplate,
+    templateUrl: url,
     link:link
     }   
   }

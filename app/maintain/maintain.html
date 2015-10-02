@@ -1,7 +1,15 @@
 <div>
-	<select>
-		<option ng-repeat="key in selectData">{{key}}</option>
-
-	</select>
+	<p> Chose the source type:
+		<select
+			ng-model="availableSources"
+			ng-options = "value for (key , value) in selectData"
+			ng-change = "showSearchForm(availableSources)" 
+			{{availableSources}}>
+		</select>
+	</p>
+	<div ng-show="searchFormData">
+		<search-form class="search"></search-form>
+		<search-results></search-results>
+	</div>
 </div>
 

@@ -5,32 +5,35 @@
 		function config($stateProvider, $urlRouterProvider) {
 		    $urlRouterProvider.otherwise("/maintain");
 		    $stateProvider
-		    .state('/maintain', {
-		      url: "/maintain",
+		    .state('maintain', {
+		      url: "/maintain?select",
 		      templateUrl: "./vendor/templates/maintain.html",
 		      controller: "maintainController",
 		      resolve: {getSelectData: getSelectData}
 		    })
-		    .state('/reports', {
+		    .state('reports', {
 		      url: "/reports",
 		      templateUrl: "./vendor/templates/reports.html"
 		    })
-		    .state('/upload', {
+		    .state('upload', {
 		      url: "/upload",
 		      templateUrl: "./vendor/templates/upload.html"
 		    })
-		    .state('/maintance', {
+		    .state('maintance', {
 		      url: "/maintance",
 		      templateUrl: "./vendor/templates/maintance.html"
 		    })
 		};
 
+
 		getSelectData.$inject = ['dataservice', 'constants'];
 		
 		function getSelectData(dataservice, constants) {
-			var url = constants.availableSources;
+			var url = constants.restJson.availableSources;
 			return dataservice.getData(url);
 		};
+
+		
 
 		angular
 		.module('app')

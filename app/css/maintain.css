@@ -2,3 +2,34 @@
 	background-color: white;
 	height:100%;
 }
+
+.search {
+	height: 283px;
+	width:687px;
+}
+
+.search-form {
+	height: 100%;
+	display: inline-block;  
+}
+
+.search-results-tabs {
+	bottom: 0;
+	margin: 0;
+	height: 100%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.search-results-tabs > ul {
+	display: inline-block;
+}
+
+.search-results-tabs > ul > li {
+	display: inline-block;
+}
+
+.search-results-tabs > ul > li > a {
+	text-decoration: none;
+	padding-right: 20px;
+}
