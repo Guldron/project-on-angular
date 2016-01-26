@@ -1,21 +1,22 @@
-;(function(){
+;
+(function () {
 
-'use strict';
+    'use strict';
 
-dataservice.$inject = ['$http'];
+    dataservice.$inject = ['$http'];
 
-function dataservice($http) {
+    function dataservice($http) {
 
-    return {
-        getData: getData
-    };
+        return {
+            getData: getData
+        };
 
-    function getData(url) {
-        return $http.get(url);
+        function getData(url) {
+            return $http.get(url);
+        }
     }
-}
 
-angular
-    .module('app')
-    .factory('dataservice', dataservice);
+    angular
+        .module('app')
+        .factory('dataservice', dataservice);
 })();

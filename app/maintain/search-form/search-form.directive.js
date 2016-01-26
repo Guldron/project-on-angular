@@ -8,34 +8,35 @@ function searchForm(constants){
     var url = constants.templates.searchForm;
 
     function link($scope, $element, $attrs){
-        $scope.selectTab = 1;
+        $scope.form.selectTab = 1;
 
-    $scope.selectedTab = function (setTab) {
-        $scope.selectTab = setTab;
+    $scope.form.selectedTab = function (setTab) {
+        $scope.form.selectTab = setTab;
     };
 
-    $scope.tabClass = function (selectedTab) {
-      if (selectedTab === $scope.selectTab) {
+    $scope.form.tabClass = function (selectedTab) {
+      if (selectedTab === $scope.form.selectTab) {
         return "active"
       }
       else {
-        return "inactive" 
+        return "inactive"
       }
     };
-    
-    $scope.isSelect = function() {
-        
+
+    $scope.form.isSelect = function() {
+
     }
-    
-            
-    }; 
-        
+
+
+    };
+
     return {
         restrict:'EA',
         templateUrl: url,
         controller: 'searchFormController',
+        controllerAs:'form',
         link:link
-    }   
+    }
 };
 
 angular

@@ -43,7 +43,7 @@ gulp.task('templates', function(){
 gulp.task('bower_components', function(){
 	gulp.src(bowerComponents)
 	.pipe(concat('vendor.js'))
-	.pipe(gulp.dest('./public/vendor'))
+	.pipe(gulp.dest('./public'))
 });
 
 gulp.task('css', function () {

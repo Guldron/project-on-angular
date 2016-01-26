@@ -1,10 +1,11 @@
-;(function(){
+;
+(function () {
 
-'use strict';
+    'use strict';
 
-	angular
-		.module('app', ['ui.router',
-				'app.constants'
-				])
+    angular
+        .module('app', ['ui.router',
+            'app.constants'
+        ])
 
 })();

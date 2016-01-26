@@ -1,11 +1,21 @@
-(function(){
+(function () {
 
-  'use strict';
+    'use strict';
 
-  function tabsController ($scope, $element, $attrs) {
-  }
+    tabsController.$inject = ['$scope'];
 
-  angular
-  .module('app')
-  .controller('tabsController',tabsController)
+    function tabsController($scope) {
+        var vm = this;
+
+        vm.tabsName = [
+            "Maintain commissions",
+            "Upload download",
+            "Reports",
+            "Maintenance"
+        ];
+    }
+
+    angular
+        .module('app')
+        .controller('tabsController', tabsController)
 })();

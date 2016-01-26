@@ -1,38 +1,49 @@
-(function(){
+;
+(function () {
 
-  'use strict';
+    'use strict';
 
-  function tabs(constants){
-    var url = constants.templates.tabs;
+    function tabs(constants) {
 
-    function link($scope, $element, $attrs){
-      $scope.tab = 1;
+        var url = constants.templates.tabs;
 
-    $scope.selectedTab = function (setTab) {
-        $scope.tab = setTab;
-    };
+        function link($scope, $element, $attrs, tabs) {
 
-    $scope.tabClass = function (selectedTab) {
-      if (selectedTab === $scope.tab) {
-        return "active"
-      }
-      else {
-        return "inactive" 
-      }
-    };
+            $scope.tabs.tab = 0;
 
+            $scope.tabs.links = $scope.tabs.tabsName.map(function(link) {
+                return link.split(' ')[0].toLowerCase();
+            });
+
+            $scope.tabs.linksName = function(index){
+                return $scope.tabs.links[index]
+            };
+
+            $scope.tabs.selectedTab = function (setTab) {
+                $scope.tabs.tab = setTab;
+            };
+
+            $scope.tabs.tabClass = function (selectedTab) {
+                if (selectedTab === $scope.tabs.tab) {
+                    return "active"
+                }
+                else {
+                    return "inactive"
+                }
+            };
+        }
+
+        return {
+            restrict: 'EA',
+            templateUrl: url,
+            link: link,
+            controller: "tabsController",
+            controllerAs: "tabs"
+        }
     }
 
-    return {
-    restrict:'EA',
-    templateUrl: url,
-    link:link
-    }   
-  }
-
-
     angular
-    .module('app')
-    .directive('tabs',tabs)
+        .module('app')
+        .directive('tabs', tabs)
 
 })();
