@@ -1,7 +1,7 @@
 <div class="search-form">
 	<h1>{{availableSources}} search using:</h1>
 	<form ng-submit="submitDetails()">
-		<p ng-repeat="detail in maintain.searchFormData">
+		<p ng-repeat="detail in searchFormData">
 		{{detail.descriptiveName}}
 			<input>
 		</p>
@@ -9,8 +9,8 @@
 	</form>
 </div>
 <div class="search-results-tabs">
-	<ul ng-repeat="detail in maintain.searchFormData">
-		<li><a href ng-class="tabClass($index)" ng-click="selectedTab($index)">{{detail.shortName}}</a></li>
-		<div>No search result:</div>
+	<ul ng-repeat="detail in searchFormData">
+		<li><a href ng-class="tabClass()" ng-click="selectedTab()">{{detail.shortName}}</a></li>
 	</ul>
+    <div>No search result:</div>
 </div>

@@ -8,6 +8,8 @@
         .constant('constants', {
             templates: {
                 tabs: 'vendor/templates/tabs.directive.html',
+                maintain: 'vendor/templates/maintain.html',
+                dropdown: 'vendor/templates/drop-down.directive.html',
                 searchForm: 'vendor/templates/search-form.directive.html',
                 searchResults: 'vendor/templates/search-form.directive.html'
             },

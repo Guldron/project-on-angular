@@ -3,6 +3,10 @@
 
     'use strict';
 
+    angular
+        .module('app')
+        .directive('tabs', tabs);
+
     function tabs(constants) {
 
         var url = constants.templates.tabs;
@@ -41,9 +45,4 @@
             controllerAs: "tabs"
         }
     }
-
-    angular
-        .module('app')
-        .directive('tabs', tabs)
-
 })();

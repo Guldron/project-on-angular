@@ -1,0 +1,90 @@
+.maintain {
+	background-color: white;
+	height:100%;
+}
+
+.search {
+	height: 283px;
+	width:687px;
+}
+
+.search-form {
+	height: 100%;
+	display: inline-block;  
+}
+
+.search-results-tabs {
+	bottom: 0;
+	margin: 0;
+	height: 100%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.search-results-tabs > ul {
+	display: inline-block;
+}
+
+.search-results-tabs > ul > li {
+	display: inline-block;
+}
+
+.search-results-tabs > ul > li > a {
+	text-decoration: none;
+	padding-right: 20px;
+}
+body {
+	margin: 0;
+	padding: 0; 
+}
+
+h1 {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+.header {
+	height: 50px;
+	background-color: #191919;
+}
+
+.tabs-list {
+	width: auto;
+	bottom: 0;
+	margin: 0;
+	padding-top: 5px;
+	padding-left: 29.5px;
+}
+
+.tabs-list-item {
+	display: inline-block;
+	height: 45px;
+	width: 150px;
+	margin-right: 29.5px;
+}
+
+.active {
+	background-color: white;
+	color: black;
+}
+
+.inactive {
+	background-color: #323232;
+	color: #cccccc;
+} 
+
+.tabs-list > li > a {
+	border-radius: 6px 6px 0 0;
+	display: block;
+	text-align: center;
+	line-height: 40px;
+	text-decoration: none;
+	height: 100%;
+	bottom: 0;	
+}
+
