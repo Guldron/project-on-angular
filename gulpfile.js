@@ -23,7 +23,7 @@ var templates = ['./app/modules/tabs/tabs.directive.html',
     './app/modules/search-results/search-results.directive.html',
     './app/partials/upload.html',
     './app/partials/reports.html',
-    './app/partials/maintance.html'];
+    './app/partials/maintenance.html'];
 
 gulp.task('bower', function () {
     return bower();

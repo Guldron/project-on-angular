@@ -8,37 +8,53 @@
         .config(config);
 
     function config($stateProvider, $urlRouterProvider) {
-        $urlRouterProvider.otherwise("/maintain");
+        $urlRouterProvider.otherwise("/Maintain");
         $stateProvider
-            .state("maintain", {
-                url: "/maintain",
+            .state("Maintain", {
+                url: "/Maintain",
                 templateUrl: "vendor/templates/maintain.html",
                 controller: "maintainController",
-                resolve: {getSelectData: getSelectData}
+                resolve: {getDropDownData: getDropDownData}
             })
-            .state("maintain.search",{
-                url:"/maintain/:search/",
-                template: '<search-form class="search"></search-form>'
+            .state("Maintain.search",{
+                url:"/:search",
+                templateUrl: "vendor/templates/search-form.directive.html",
+                controller: "searchFormController",
+                resolve: {getSearchFormData: getSearchFormData}
             })
-            .state('reports', {
-                url: "/reports",
+            .state('Reports', {
+                url: "/Reports",
                 templateUrl: "./vendor/templates/reports.html"
             })
-            .state('upload download', {
-                url: "/upload",
+            .state('Upload download', {
+                url: "/Upload",
                 templateUrl: "./vendor/templates/upload.html"
             })
-            .state('maintenance', {
-                url: "/maintenance",
+            .state('Maintenance', {
+                url: "/Maintenance",
                 templateUrl: "./vendor/templates/maintenance.html"
             })
-    };
+    }
 
 
-    getSelectData.$inject = ['dataservice', 'constants'];
+    getDropDownData.$inject = ['dataservice', 'constants'];
 
-    function getSelectData(dataservice, constants) {
+    function getDropDownData(dataservice, constants) {
         var url = constants.json.availableSources;
-        return dataservice.getData(url);
+        return dataservice.getData(url)
+            .then(function(data){
+            return data.sources;
+        });
+    }
+
+    getSearchFormData.$inject = ['dataservice', 'constants', '$stateParams'];
+
+    function getSearchFormData(dataservice, constants, $stateParams) {
+        var search = $stateParams.search;
+        var url = constants.json[search.split(' ')[0].toLowerCase()];
+        return dataservice.getData(url)
+            .then(function (data) {
+                return data.definitions;
+            })
     }
 })();

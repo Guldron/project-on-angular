@@ -11,23 +11,19 @@
 
     function dropDown(constants) {
 
-        var url = constants.templates.dropdown;
-        console.log(url);
-
+        var url = constants.templates.dropDown;
 
         function link($scope, $element, $attrs) {
-            $scope.$on('dropDownData', function (event, data) {
-                console.log(data);
-                $scope.selectData = data.data.response.sources;
-            });
+
         }
 
         return {
             restrict: 'EA',
-            url: url,
-            scope: {},
+            templateUrl: url,
+            scope:{
+                dropDownData: "=dropdowndata"
+            },
             controller: 'dropDownController',
-            controllerAs: 'dropDown',
             link: link
         }
     }

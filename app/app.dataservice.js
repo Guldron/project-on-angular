@@ -16,7 +16,10 @@
         };
 
         function getData(url) {
-            return $http.get(url);
+            return $http.get(url)
+                .then(function(data){
+                    return data.data.response;
+                });
         }
     }
 })();

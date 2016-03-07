@@ -16,7 +16,7 @@
             $scope.tabs.tab = 0;
 
             $scope.tabs.links = $scope.tabs.tabsName.map(function(link) {
-                return link.split(' ')[0].toLowerCase();
+                return link.split(' ')[0];
             });
 
             $scope.tabs.linksName = function(index){

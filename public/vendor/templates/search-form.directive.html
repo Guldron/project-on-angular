@@ -1,13 +1,17 @@
 <div class="search-form">
-	<h1>{{availableSources}} search using:</h1>
+	<h1>{{::usingSearch}} search using:</h1>
 	<form ng-submit="submitDetails()">
 		<p ng-repeat="detail in searchFormData">
-		{{detail.descriptiveName}}
-			<input>
+		{{::detail.descriptiveName}}
+            <input ng-if="detail.inputFieldType === 'INPUT'"
+                   ng-maxlength="detail.fieldLength"
+                   ng-disabled="detail.disabledUntilPreviousTierSet">
+            <select ng-if="detail.inputFieldType === 'SELECT'"></select>
 		</p>
 		<input type="submit" value="Search">
 	</form>
 </div>
+
 <div class="search-results-tabs">
 	<ul ng-repeat="detail in searchFormData">
 		<li><a href ng-class="tabClass()" ng-click="selectedTab()">{{detail.shortName}}</a></li>

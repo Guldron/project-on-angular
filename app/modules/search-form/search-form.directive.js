@@ -14,15 +14,16 @@
         var url = constants.templates.searchForm;
 
         function link($scope, $element, $attrs) {
-            $scope.form.selectTab = 1;
 
-            $scope.form.selectedTab = function (setTab) {
+            $scope.selectTab = 1;
+
+            $scope.selectedTab = function (setTab) {
                 console.log(setTab);
-                $scope.form.selectTab = setTab;
+                $scope.selectTab = setTab;
             };
 
-            $scope.form.tabClass = function (selectedTab) {
-                if (selectedTab === $scope.form.selectTab) {
+            $scope.tabClass = function (selectedTab) {
+                if (selectedTab === $scope.selectTab) {
                     return "active"
                 }
                 else {
@@ -30,18 +31,14 @@
                 }
             };
 
-            $scope.form.isSelect = function () {
+            $scope.isSelect = function () {
             }
         }
 
         return {
             restrict: 'EA',
-            templateUrl: url,
-            scope:{
-                searchFormData: "="
-            },
+            scope:{},
             controller: 'searchFormController',
-            controllerAs: 'form',
             link: link
         }
     }

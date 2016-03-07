@@ -4,7 +4,7 @@
 
     angular
         .module('app')
-        .controller('tabsController', tabsController)
+        .controller('tabsController', tabsController);
 
     tabsController.$inject = ['$scope'];
 
