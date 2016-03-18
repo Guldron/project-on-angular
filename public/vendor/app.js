@@ -29,16 +29,17 @@
                 availableSources: 'vendor/rest/retrieveAvailableSources.json',
                 all: 'vendor/rest/retrieveTierDetails.json',
                 mobile: 'vendor/rest/retrieveTierDetailsMobile.json',
-                slam: 'vendor/rest/retrieveTierDetailsSlam.json'
-                /*validateTiers: {
-                    'All sources': 'vendor/rest/validateTier.json',
-                    'Mobile': 'vendor/rest/validateTierMobile.json',
-                    'SLAM': 'vendor/rest/validateTierSlam.json'
-                }*/
+                slam: 'vendor/rest/retrieveTierDetailsSlam.json',
+                validateTiers: {
+                    all: 'vendor/rest/validateTier.json',
+                    mobile: 'vendor/rest/validateTierMobile.json',
+                    slam: 'vendor/rest/validateTierSlam.json'
+                }
             }
         });
 
 })();
+
 ;
 (function () {
 
@@ -84,8 +85,8 @@
             })
             .state("Maintain.search",{
                 url:"/:search",
-                templateUrl: "vendor/templates/search-form.directive.html",
-                controller: "searchFormController",
+                controller: "searchController",
+                templateUrl: "vendor/templates/search.html",
                 resolve: {getSearchFormData: getSearchFormData}
             })
             .state('Reports', {
@@ -175,10 +176,10 @@
 
             $scope.tabs.tabClass = function (selectedTab) {
                 if (selectedTab === $scope.tabs.tab) {
-                    return "active"
+                    return "active-header-tab"
                 }
                 else {
-                    return "inactive"
+                    return "inactive-header-tab"
                 }
             };
         }
@@ -210,28 +211,6 @@
     }
 })();
 
-;
-(function () {
-
-    "use strict";
-
-    angular
-        .module('app')
-        .directive('maintain', maintain);
-
-    function maintain() {
-
-
-        function link($scope, $element, $attrs) {
-        }
-
-        return {
-            restrict: 'EA',
-            controller: 'maintainController',
-            link: link
-        }
-    }
-})();
 ;
 (function () {
 
@@ -296,14 +275,41 @@
 
     angular
         .module('app')
+        .controller('searchController', searchController);
+
+    searchController.$inject = ['$scope', 'constants', 'dataservice','getSearchFormData', '$stateParams'];
+
+    function searchController($scope, constants, dataservice, getSearchFormData, $stateParams) {
+        $scope.searchFormData = getSearchFormData;
+    }
+})();
+;
+(function () {
+
+    "use strict";
+
+    angular
+        .module('app')
         .controller('searchFormController', searchFormController);
 
-    searchFormController.$inject = ['$scope', 'constants', 'dataservice','getSearchFormData', '$stateParams'];
+    searchFormController.$inject = ['$scope', '$http', 'constants', 'dataservice', '$stateParams'];
 
-    function searchFormController($scope, constants, dataservice, getSearchFormData, $stateParams) {
-        $scope.searchFormData = getSearchFormData;
+    function searchFormController($scope, $http, constants, dataservice, $stateParams) {
+
         $scope.usingSearch = $stateParams.search;
-        console.log($scope.searchFormData);
+
+        $scope.submitDetails = function () {
+            if ($scope.searchFormName.$valid) {
+                var url = constants.json.validateTiers.all;
+                $http.get(url).then(function(response){
+                    console.log(response)
+                });
+                console.log($scope.searchFormName);
+
+            }  else {
+                console.log('Form is invalid');
+            }
+        };
     }
 })();
 
@@ -323,32 +329,46 @@
         var url = constants.templates.searchForm;
 
         function link($scope, $element, $attrs) {
+            $scope.detailType = "ALPHANUMERIC";
+            $scope.regExpNumeric = /^[0-9]*$/;
+            $scope.regExpAlphaNumeric = /^[a-zA-Z0-9]*$/;
+            $scope.selectTab = 0;
+            $scope.selectedTab = selectedTab;
+            $scope.tabShow = tabShow;
 
-            $scope.selectTab = 1;
-
-            $scope.selectedTab = function (setTab) {
-                console.log(setTab);
+            function selectedTab(setTab) {
                 $scope.selectTab = setTab;
             };
 
-            $scope.tabClass = function (selectedTab) {
-                if (selectedTab === $scope.selectTab) {
-                    return "active"
-                }
-                else {
-                    return "inactive"
+            function tabShow(index) {
+                if ($scope.selectTab === index) {
+                    return true;
+                } else {
+                    return false;
                 }
             };
 
-            $scope.isSelect = function () {
-            }
+            
+            /*$scope.tabClass = function (selectedTab) {
+                if (selectedTab === $scope.selectTab) {
+                    return "active-search-tab"
+                }
+                else {
+                    return "inactive-search-tab"
+                }
+            };*/
         }
+
+
 
         return {
             restrict: 'EA',
-            scope:{},
-            controller: 'searchFormController',
-            link: link
+            link: link,
+            templateUrl: url,
+            controller: "searchFormController",
+            scope:{
+                searchFormData:"=searchformdata"
+            }
         }
     }
 })();

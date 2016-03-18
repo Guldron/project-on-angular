@@ -18,8 +18,8 @@
             })
             .state("Maintain.search",{
                 url:"/:search",
-                templateUrl: "vendor/templates/search-form.directive.html",
-                controller: "searchFormController",
+                controller: "searchController",
+                templateUrl: "vendor/templates/search.html",
                 resolve: {getSearchFormData: getSearchFormData}
             })
             .state('Reports', {

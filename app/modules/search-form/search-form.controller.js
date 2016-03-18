@@ -7,11 +7,23 @@
         .module('app')
         .controller('searchFormController', searchFormController);
 
-    searchFormController.$inject = ['$scope', 'constants', 'dataservice','getSearchFormData', '$stateParams'];
+    searchFormController.$inject = ['$scope', '$http', 'constants', 'dataservice', '$stateParams'];
 
-    function searchFormController($scope, constants, dataservice, getSearchFormData, $stateParams) {
-        $scope.searchFormData = getSearchFormData;
+    function searchFormController($scope, $http, constants, dataservice, $stateParams) {
+
         $scope.usingSearch = $stateParams.search;
-        console.log($scope.searchFormData);
+
+        $scope.submitDetails = function () {
+            if ($scope.searchFormName.$valid) {
+                var url = constants.json.validateTiers.all;
+                $http.get(url).then(function(response){
+                    console.log(response)
+                });
+                console.log($scope.searchFormName);
+
+            }  else {
+                console.log('Form is invalid');
+            }
+        };
     }
 })();

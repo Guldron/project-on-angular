@@ -18,12 +18,12 @@
                 availableSources: 'vendor/rest/retrieveAvailableSources.json',
                 all: 'vendor/rest/retrieveTierDetails.json',
                 mobile: 'vendor/rest/retrieveTierDetailsMobile.json',
-                slam: 'vendor/rest/retrieveTierDetailsSlam.json'
-                /*validateTiers: {
-                    'All sources': 'vendor/rest/validateTier.json',
-                    'Mobile': 'vendor/rest/validateTierMobile.json',
-                    'SLAM': 'vendor/rest/validateTierSlam.json'
-                }*/
+                slam: 'vendor/rest/retrieveTierDetailsSlam.json',
+                validateTiers: {
+                    all: 'vendor/rest/validateTier.json',
+                    mobile: 'vendor/rest/validateTierMobile.json',
+                    slam: 'vendor/rest/validateTierSlam.json'
+                }
             }
         });
 

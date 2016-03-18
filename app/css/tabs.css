@@ -33,12 +33,12 @@ ul {
 	margin-right: 29.5px;
 }
 
-.active {
+.active-header-tab {
 	background-color: white;
 	color: black;
 }
 
-.inactive {
+.inactive-header-tab {
 	background-color: #323232;
 	color: #cccccc;
 } 

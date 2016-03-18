@@ -29,10 +29,10 @@
 
             $scope.tabs.tabClass = function (selectedTab) {
                 if (selectedTab === $scope.tabs.tab) {
-                    return "active"
+                    return "active-header-tab"
                 }
                 else {
-                    return "inactive"
+                    return "inactive-header-tab"
                 }
             };
         }

@@ -33,6 +33,13 @@
 	text-decoration: none;
 	padding-right: 20px;
 }
+.active-search-tab {
+    border: 1px;
+}
+
+.inactive-search-tab {
+
+}
 body {
 	margin: 0;
 	padding: 0; 
@@ -68,12 +75,12 @@ ul {
 	margin-right: 29.5px;
 }
 
-.active {
+.active-header-tab {
 	background-color: white;
 	color: black;
 }
 
-.inactive {
+.inactive-header-tab {
 	background-color: #323232;
 	color: #cccccc;
 } 

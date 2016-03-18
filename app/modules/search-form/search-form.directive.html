@@ -1,20 +1,40 @@
+
 <div class="search-form">
 	<h1>{{::usingSearch}} search using:</h1>
-	<form ng-submit="submitDetails()">
-		<p ng-repeat="detail in searchFormData">
-		{{::detail.descriptiveName}}
-            <input ng-if="detail.inputFieldType === 'INPUT'"
-                   ng-maxlength="detail.fieldLength"
-                   ng-disabled="detail.disabledUntilPreviousTierSet">
-            <select ng-if="detail.inputFieldType === 'SELECT'"></select>
-		</p>
+	<form name="searchFormName" ng-submit="submitDetails()">
+		<div ng-repeat="detail in searchFormData">
+			<p>{{::detail.descriptiveName}}</p>
+			<input
+				ng-if="detail.inputFieldType === 'INPUT'"
+				name="INPUT_{{::$index}}"
+				ng-model="input"
+				ng-maxlength="detail.fieldLength"
+				ng-disabled="detail.disabledUntilPreviousTierSet ? searchFormName['INPUT_{{$index-1}}'].$error.required : detail.disabledUntilPreviousTierSet "
+				ng-pattern="detail.type === detailType ? regExpAlphaNumeric : regExpNumeric"
+				required
+			>
+
+			<select ng-if="detail.inputFieldType === 'SELECT'"
+					ng-model="input"
+					name="INPUT_{{::$index}}"
+					ng-disabled="detail.disabledUntilPreviousTierSet ? searchFormName['INPUT_{{$index-1}}'].$error.required : detail.disabledUntilPreviousTierSet "
+					>
+			</select>
+
+			<span ng-show="searchFormName.INPUT_{{::$index}}.$error.pattern">Incorrect value</span>
+		</div>
 		<input type="submit" value="Search">
-	</form>
+	<form>
 </div>
 
-<div class="search-results-tabs">
-	<ul ng-repeat="detail in searchFormData">
-		<li><a href ng-class="tabClass()" ng-click="selectedTab()">{{detail.shortName}}</a></li>
+<div class="search-results-tabs" ng-repeat="detail in searchFormData">
+	<ul >
+		<li>
+			<a  href
+				ng-click="selectedTab($index)">
+				{{detail.shortName}}
+			</a>
+		</li>
 	</ul>
-    <div>No search result:</div>
+	<div ng-show="tabShow($index)"> No search result:</div>
 </div>

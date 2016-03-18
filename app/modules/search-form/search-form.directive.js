@@ -14,32 +14,46 @@
         var url = constants.templates.searchForm;
 
         function link($scope, $element, $attrs) {
+            $scope.detailType = "ALPHANUMERIC";
+            $scope.regExpNumeric = /^[0-9]*$/;
+            $scope.regExpAlphaNumeric = /^[a-zA-Z0-9]*$/;
+            $scope.selectTab = 0;
+            $scope.selectedTab = selectedTab;
+            $scope.tabShow = tabShow;
 
-            $scope.selectTab = 1;
-
-            $scope.selectedTab = function (setTab) {
-                console.log(setTab);
+            function selectedTab(setTab) {
                 $scope.selectTab = setTab;
             };
 
-            $scope.tabClass = function (selectedTab) {
-                if (selectedTab === $scope.selectTab) {
-                    return "active"
-                }
-                else {
-                    return "inactive"
+            function tabShow(index) {
+                if ($scope.selectTab === index) {
+                    return true;
+                } else {
+                    return false;
                 }
             };
 
-            $scope.isSelect = function () {
-            }
+            
+            /*$scope.tabClass = function (selectedTab) {
+                if (selectedTab === $scope.selectTab) {
+                    return "active-search-tab"
+                }
+                else {
+                    return "inactive-search-tab"
+                }
+            };*/
         }
+
+
 
         return {
             restrict: 'EA',
-            scope:{},
-            controller: 'searchFormController',
-            link: link
+            link: link,
+            templateUrl: url,
+            controller: "searchFormController",
+            scope:{
+                searchFormData:"=searchformdata"
+            }
         }
     }
 })();
